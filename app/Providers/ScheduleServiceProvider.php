@@ -13,8 +13,5 @@ class ScheduleServiceProvider extends ServiceProvider
      */
     public function boot(Schedule $schedule, Application $app): void
     {
-        $schedule->command('rabbitmq:consume')
-            ->everyFiveSeconds()
-            ->withoutOverlapping();
     }
 }

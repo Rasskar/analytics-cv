@@ -51,6 +51,23 @@ return [
     */
 
     'channels' => [
+        'analytics-queue' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/analytics-queue.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
+
+        'analytics-queue-err' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/analytics-queue-err.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
+
+        'analytics-queue-out' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/analytics-queue-out.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
 
         'stack' => [
             'driver' => 'stack',
